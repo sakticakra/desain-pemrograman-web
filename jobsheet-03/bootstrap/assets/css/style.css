@@ -1,0 +1,51 @@
+:root { 
+    --primary-color: #1d5b8a; 
+    --light-bg: #fff9f2; 
+}
+
+body { 
+    background-color: #F3E6D5; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+main { 
+    flex: 1 0 auto; 
+}
+
+.stat-card { 
+    background-color: var(--light-bg); 
+    height: 100%; 
+    transition: transform .2s; 
+    border: 1px solid rgba(128, 0, 32, 0.1); 
+}
+
+.stat-card:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1) !important; 
+}
+
+.text-primary-custom { 
+    color: var(--primary-color) !important; 
+}
+
+.btn-primary-custom { 
+    background-color: var(--primary-color); 
+    color: #fff; border: none; 
+}
+
+.btn-primary-custom:hover { 
+    background-color: #1d5b8a; 
+    color: #fff; 
+}
+
+.form-control:focus, .form-select:focus { 
+    border-color: var(--primary-color); 
+    box-shadow: 0 0 0 .25rem rgba(128, 0, 32, 0.25); 
+}
+
+footer { 
+    border-top: 1px solid #dcdcdc; 
+    background-color: #fff9f2; 
+}
