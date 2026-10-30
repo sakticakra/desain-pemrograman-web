@@ -64,11 +64,16 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                     </tr>
                     <?php else: ?>
                         <?php foreach ($daftarBuku as $buku): ?>
-                        <tr>
+                        <tr class="<?php echo (int) $buku['stok'] <= 3 ? 'stok-menipis' : ''; ?>">
                             <td><?php echo $buku['judul']; ?></td>
                             <td><?php echo $buku['pengarang']; ?></td>
                             <td><?php echo $buku['tahun']; ?></td>
-                            <td><?php echo $buku['stok']; ?></td>
+                            <td>
+                                <?php echo (int) $buku['stok']; ?>
+                                <?php if ((int) $buku['stok'] <= 3): ?>
+                                    <span class="stock-warning">Stok menipis</span>
+                                <?php endif; ?>
+                            </td>
                             <td>
                                 <a href="edit.php?id=<?php echo $buku['id']; ?>" class="btn-edit">Edit</a>
                                 <form class="form-hapus" method="post" action="hapus.php">

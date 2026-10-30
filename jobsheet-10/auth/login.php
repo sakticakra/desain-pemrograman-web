@@ -27,7 +27,10 @@ unset($_SESSION['flash']);
                 </p>
                 <p>
                     <label for="password">Password</label><br>
-                    <input type="password" id="password" name="password" required>
+                    <span class="password-field">
+                        <input type="password" id="password" name="password" required>
+                        <button type="button" class="toggle-password" data-toggle-password="password" aria-pressed="false">Tampilkan</button>
+                    </span>
                 </p>
                 <p>
                     <button type="submit">Masuk</button>

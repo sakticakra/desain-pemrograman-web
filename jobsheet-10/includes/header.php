@@ -37,7 +37,7 @@ $base = $__rel === '' ? '' : str_repeat('../', substr_count($__rel, '/') + 1);
                 <?php if (!empty($_SESSION['nama'])): ?>
                     <span><?php echo htmlspecialchars($_SESSION['nama'], ENT_QUOTES, 'UTF-8'); ?></span>
                 <?php endif; ?>
-                <a href="<?php echo $base; ?>auth/logout.php">Logout</a>
+                <a class="confirm-logout" href="<?php echo $base; ?>auth/logout.php">Logout</a>
             <?php else: ?>
                 <a href="<?php echo $base; ?>auth/login.php">Login</a>
             <?php endif; ?>

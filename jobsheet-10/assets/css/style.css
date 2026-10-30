@@ -8,12 +8,12 @@
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     color: #2b2b2b;
-    background-color: #f5f6f8;
+    background-color: #F3E6D5;
     line-height: 1.5;
 }
 
 a {
-    color: #1d5b8a;
+    color: #800020;
     text-decoration: none;
 }
 
@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #1d5b8a;
+    background-color: #800020;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -43,7 +43,7 @@ header nav ul {
 }
 
 header nav a {
-    color: #fff;
+    color: #fff9f2;
     font-weight: 500;
 }
 
@@ -67,7 +67,7 @@ main {
 }
 
 section {
-    background-color: #fff;
+    background-color: #fff9f2;
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -77,7 +77,7 @@ section {
 section h2 {
     grid-column: 1 / -1;
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #800020;
 }
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
@@ -89,7 +89,7 @@ main section:nth-of-type(2) {
 }
 
 main section:nth-of-type(2) article {
-    background-color: #eef4fa;
+    background-color: #f0d8d4;
     border-radius: 8px;
     padding: 1.25rem;
     text-align: center;
@@ -97,14 +97,14 @@ main section:nth-of-type(2) article {
 
 main section:nth-of-type(2) article h3 {
     font-size: 0.95rem;
-    color: #55677a;
+    color: #2b2b2b;
     margin-bottom: 0.5rem;
 }
 
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #800020;
 }
 
 /* ===== Tabel ===== */
@@ -120,16 +120,16 @@ th, td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: #800020;
     color: #fff;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f7f9fb;
+    background-color: #fff9f2;
 }
 
 tbody tr:hover {
-    background-color: #eef4fa;
+    background-color: #f7e9e5;
 }
 
 td button {
@@ -181,13 +181,13 @@ td form.form-hapus {
     padding: 0.4rem 0.75rem;
     border: 1px solid #cdd4da;
     border-radius: 4px;
-    color: #1d5b8a;
+    color: #800020;
 }
 
 .pagination a.active {
-    background-color: #1d5b8a;
+    background-color: #800020;
     color: #fff;
-    border-color: #1d5b8a;
+    border-color: #800020;
 }
 
 .search-box form {
@@ -200,7 +200,7 @@ td form.form-hapus {
     padding: 0.55rem 1.2rem;
     border: none;
     border-radius: 4px;
-    background-color: #1d5b8a;
+    background-color: #d45060;
     color: #fff;
     cursor: pointer;
 }
@@ -227,8 +227,31 @@ form select {
     font-size: 1rem;
 }
 
+.password-field {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.password-field input {
+    min-width: 0;
+    flex: 1;
+}
+
+.toggle-password {
+    flex: 0 0 auto;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+    background-color: #fff9f2;
+    color: #800020;
+    cursor: pointer;
+}
+
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: #d45060;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -237,8 +260,24 @@ form button[type="submit"] {
     cursor: pointer;
 }
 
+.stock-warning {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    background-color: #fff3cd;
+    color: #856404;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+tbody tr.stok-menipis td:nth-child(4) {
+    color: #856404;
+    font-weight: 600;
+}
+
 form button[type="submit"]:hover {
-    background-color: #164869;
+    background-color: #b43b4b;
 }
 
 /* ===== Footer ===== */

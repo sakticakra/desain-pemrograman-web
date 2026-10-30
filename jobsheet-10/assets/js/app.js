@@ -1,4 +1,4 @@
-// ===== Hamburger menu (JS-driven, menggantikan checkbox hack) =====
+// ===== Hamburger menu =====
 function initNavToggle() {
     const toggleBtn = document.getElementById("nav-toggle-btn");
     const nav = document.querySelector("header nav");
@@ -6,6 +6,30 @@ function initNavToggle() {
 
     toggleBtn.addEventListener("click", function () {
         nav.classList.toggle("nav-open");
+    });
+}
+
+function initPasswordToggle() {
+    document.querySelectorAll("[data-toggle-password]").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const input = document.getElementById(button.dataset.togglePassword);
+            if (!input) return;
+
+            const showPassword = input.type === "password";
+            input.type = showPassword ? "text" : "password";
+            button.textContent = showPassword ? "Sembunyikan" : "Tampilkan";
+            button.setAttribute("aria-pressed", String(showPassword));
+        });
+    });
+}
+
+function initLogoutConfirm() {
+    document.querySelectorAll(".confirm-logout").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+            if (!confirm("Apakah Anda yakin ingin logout?")) {
+                e.preventDefault();
+            }
+        });
     });
 }
 
@@ -109,6 +133,8 @@ function initValidasiForm() {
 
 document.addEventListener("DOMContentLoaded", function () {
     initNavToggle();
+    initPasswordToggle();
+    initLogoutConfirm();
     initHapusConfirm();
     initTableFilter();
     initValidasiForm();
